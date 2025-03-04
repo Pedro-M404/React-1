@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
-import { v4 as uuidv4 } from "uuid"; // Correção da importação do UUID
+import { v4 as uuidv4 } from "uuid"; 
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -25,10 +25,10 @@ function App() {
   }
 
   function onAddTaskSubmit(title, description) {
-    if (!title.trim() || !description.trim()) return; // Evita adicionar tarefas vazias
+    if (!title.trim() || !description.trim()) return; 
 
     const newTask = {
-      id: uuidv4(), // Agora o UUID está correto
+      id: uuidv4(), 
       title,
       description,
       iscompleted: false,
